@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom"
 import styled from "styled-components"
 import logo from "../../utils/logolight.png"
-import montserrat from "../../utils/style/font"
 import colors from "../../utils/style/colors"
 
 const StyledLink = styled(Link)`
@@ -9,13 +8,13 @@ const StyledLink = styled(Link)`
 	font-size: 24px;
 	padding: 15px;
 	text-decoration: none;
-	font-family :  ${montserrat}
 `
 const StyledNav = styled.nav`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	margin: auto;
+	margin-top:30px;
 	width: 90%;
 	height: 68px;
 `

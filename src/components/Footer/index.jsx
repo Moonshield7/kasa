@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import logo from "../../utils/logodark.png"
-import montserrat from "../../utils/style/font"
 import colors from "../../utils/style/colors"
 
 const StyledFooter = styled.footer`
@@ -12,7 +11,6 @@ const StyledFooter = styled.footer`
 	justify-content:center;
 	align-items: center;
 	color: ${colors.white};
-	font-family: ${montserrat};
 	font-size:24px;
 `
 
