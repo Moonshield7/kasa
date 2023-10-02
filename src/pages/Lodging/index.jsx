@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom"
 import data from "../../data/data.json"
 import styled from "styled-components";
 import colors from "../../utils/style/colors";
+import Tag from "../../components/Tag";
 
 const Container = styled.div`
 	width: 90%;
@@ -40,18 +41,7 @@ const MiscContainer = styled.div`
 	display:flex;
 	justify-content: space-between;
 `
-const Tag = styled.li`
-	width: 115px;
-	height: 25px;
-	color: ${colors.white};
-	font-size: 14px;
-	background-color: ${colors.primary};
-	border-radius:10px;
-	display:flex;
-	justify-content:center;
-	align-items: center;
-	margin-right: 15px;
-`
+
 const StarContainer = styled.div`
 	display:flex;
 	width:29%;
@@ -80,7 +70,9 @@ function Lodging () {
 			<MiscContainer>
 				<TagList>
 					{currentLodging.tags.map((tag, index) => {
-						return <Tag key={index}>{tag}</Tag>
+						return <Tag 
+							key={index}
+							tag={tag} />
 					})}
 				</TagList>
 				<StarContainer>
