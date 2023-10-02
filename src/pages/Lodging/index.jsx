@@ -32,8 +32,13 @@ const HostPicture = styled.img`
 	border-radius: 50px;
 `
 const TagList = styled.ul`
-	width: 60%;
+	width: 70%;
 	display:flex;
+`
+const MiscContainer = styled.div`
+	width:100%;
+	display:flex;
+	justify-content: space-between;
 `
 const Tag = styled.li`
 	width: 115px;
@@ -46,6 +51,11 @@ const Tag = styled.li`
 	justify-content:center;
 	align-items: center;
 	margin-right: 15px;
+`
+const StarContainer = styled.div`
+	display:flex;
+	width:29%;
+	justify-content:flex-end;
 `
 
 function Lodging () {
@@ -67,16 +77,16 @@ function Lodging () {
 					<HostPicture src={currentLodging.host.picture} alt="" />
 				</HostInfo>
 			</TitleArea>
-			<div>
+			<MiscContainer>
 				<TagList>
 					{currentLodging.tags.map((tag, index) => {
 						return <Tag key={index}>{tag}</Tag>
 					})}
 				</TagList>
-				<div>
+				<StarContainer>
 					etoiles
-				</div>
-			</div>
+				</StarContainer>
+			</MiscContainer>
 			<div>
 				<div>
 					description
