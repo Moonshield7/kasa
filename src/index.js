@@ -7,6 +7,7 @@ import Lodging from './pages/Lodging';
 import About from './pages/About';
 import Header from './components/Header'
 import Footer from './components/Footer'
+import style from "./utils/style/style.module.css"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,7 +17,7 @@ root.render(
       <Routes>
         <Route path="/" element={<Home />} /> 
         <Route path="*" element={<Error />} />
-        <Route path="/lodging/:lodgingNumber" element={<Lodging />} />
+        <Route path="/lodging/:idLodging" element={<Lodging />} />
         <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
