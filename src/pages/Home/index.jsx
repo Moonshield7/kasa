@@ -2,6 +2,7 @@ import styled from "styled-components"
 import colors from "../../utils/style/colors"
 import Banner from "../../components/Banner"
 import Card from "../../components/Card"
+import data from "../../data/data.json"
 
 //Placeholder content before making the actual components
 const CardContainer = styled.ul`
@@ -17,28 +18,17 @@ const CardContainer = styled.ul`
 	justify-content: space-between;
 `
 
-const CardTest = styled.li`
-	list-style: none;
-	width:340px;
-	height: 340px;
-	align-self: center;
-	margin-bottom: 75px;
-	background-color: ${colors.primary};
-	border-radius: 15px;
-	overflow: clip;
-`
-
 function Home () {
 	return (
 		<div>
 			<Banner />
 			<CardContainer>
-				<Card></Card>
-				<Card></Card>
-				<Card></Card>
-				<Card></Card>
-				<Card></Card>
-				<Card></Card>
+				{data.map((lodging, id) => (
+					<Card 
+					key={id}
+					cover={lodging.cover}
+					title={lodging.title} />
+				))}
 			</CardContainer>
 		</div>
 	)

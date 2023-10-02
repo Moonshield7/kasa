@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import colors from "../../utils/style/colors"
-import picture from "../../utils/assets/homeimg.png"
+import PropTypes from "prop-types"
 
 const Container = styled.li`
 	list-style: none;
@@ -20,22 +20,28 @@ const CardTitle = styled.h2`
 	top: 260px;
 	left: 20px;
 	z-index: 2;
+	text-shadow: -5px 0px 7px rgba(0,0,0,0.72);
 `
 const CardImg = styled.img`
 	position: relative;
 	top:-52px;
-	width:340px;
+	min-width:340px;
 	height: 340px;
 	z-index: 0;
 `
 
-function Card() {
+function Card({cover, title}) {
 	return (
 		<Container>
-			<CardTitle>Titre de la location sur deux lignes et la location sur</CardTitle>
-			<CardImg src={picture} alt="" />
+			<CardTitle>{title}</CardTitle>
+			<CardImg src={cover} alt="" />
 		</Container>
 	)
+}
+
+Card.propTypes = {
+	title: PropTypes.string.isRequired,
+	cover: PropTypes.string.isRequired
 }
 
 export default Card
