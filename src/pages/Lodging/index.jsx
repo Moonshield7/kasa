@@ -59,7 +59,6 @@ const StarContainer = styled.div`
 function Lodging () {
 	const { idLodging } = useParams();
 	const currentLodging = data.find((lodging) => lodging.id === idLodging);
-	console.log(currentLodging)
 
 	return (
 		<Container>

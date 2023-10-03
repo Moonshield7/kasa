@@ -3,7 +3,6 @@ import inactiveStar from "../../utils/assets/star-inactive 1.png"
 
 function Rating({numberOfStars}) {
 	const rating = parseInt(numberOfStars);
-	console.log(rating)
 
 	switch(rating) {
 		case 1:

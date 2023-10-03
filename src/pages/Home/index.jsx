@@ -3,6 +3,7 @@ import colors from "../../utils/style/colors"
 import Banner from "../../components/Banner"
 import Card from "../../components/Card"
 import data from "../../data/data.json"
+import { Link } from "react-router-dom"
 
 //Placeholder content before making the actual components
 const CardContainer = styled.ul`
@@ -24,10 +25,12 @@ function Home () {
 			<Banner />
 			<CardContainer>
 				{data.map((lodging, id) => (
+					<Link to={`/lodging/${lodging.id}`} key={`${lodging}-${id}`}>
 					<Card 
-					key={id}
+					key={`${lodging}-${id}`}
 					cover={lodging.cover}
 					title={lodging.title} />
+					</Link>
 				))}
 			</CardContainer>
 		</div>

@@ -2,7 +2,7 @@ import colors from "../../utils/style/colors"
 import styled from "styled-components"
 
 const TagLabel = styled.li`
-	width: 115px;
+	min-width: 115px;
 	height: 25px;
 	color: ${colors.white};
 	font-size: 14px;
@@ -12,6 +12,7 @@ const TagLabel = styled.li`
 	justify-content:center;
 	align-items: center;
 	margin-right: 15px;
+	padding: 0 10px;
 `
 
 function Tag ({index, tag}) {
