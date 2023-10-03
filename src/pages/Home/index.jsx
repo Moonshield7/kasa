@@ -24,10 +24,10 @@ function Home () {
 		<div>
 			<Banner />
 			<CardContainer>
-				{data.map((lodging, id) => (
-					<Link to={`/lodging/${lodging.id}`} key={`${lodging}-${id}`}>
+				{data.map((lodging, index) => (
+					<Link to={`/lodging/${lodging.id}`} key={`${lodging}-${index}`}>
 					<Card 
-					key={`${lodging}-${id}`}
+					key={`${lodging}-${index}`}
 					cover={lodging.cover}
 					title={lodging.title} />
 					</Link>

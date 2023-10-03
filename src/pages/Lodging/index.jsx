@@ -78,7 +78,7 @@ function Lodging () {
 				<TagList>
 					{currentLodging.tags.map((tag, index) => {
 						return <Tag 
-							key={index}
+						key={`${tag}-${index}`}
 							tag={tag} />
 					})}
 				</TagList>

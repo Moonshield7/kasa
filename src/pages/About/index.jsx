@@ -23,9 +23,9 @@ function About () {
 		<Container>
 			<Banner />
 			<CollapseContainer>
-				{data.map((section, id) => (
+				{data.map((section, index) => (
 					 <Collapse 
-						key={id}
+					 key={`${section}-${index}`}
 						title={section.title}
 						content={section.content}
 					 />
