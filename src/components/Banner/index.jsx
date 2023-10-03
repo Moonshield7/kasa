@@ -1,12 +1,12 @@
 import styled from "styled-components"
 import colors from "../../utils/style/colors"
 import picture1 from "../../utils/assets/homeimg.png"
+import picture2 from "../../utils/assets/aboutimg.png"
 
 const text = "Chez vous, partout et ailleurs"
 const Background = styled.header`
 	width: 90%;
 	height: 223px;
-	background: url(${picture1});
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -29,10 +29,17 @@ const Title = styled.h1`
 `
 
 function Banner(){
+	const activePage = window.location.href;
+	const styles = {
+		image:{
+			backgroundImage: activePage === "http://localhost:3000/about" ? `url(${picture2})` : `url(${picture1})`
+			
+		}
+	}
 	return (
-	<Background>
+	<Background style={styles.image}>
 		<Title>
-			{text}
+			{activePage === "http://localhost:3000/about" ? "" : text}
 		</Title>
 	</Background>
 	)

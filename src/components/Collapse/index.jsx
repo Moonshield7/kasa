@@ -38,7 +38,6 @@ function Collapse ({title, content}) {
 	const [isCollapsed, setIsCollapsed] = useState(false);
 	function toggle () {
 		setIsCollapsed(!isCollapsed)
-		console.log(isCollapsed)
 	}
 
 	return (
