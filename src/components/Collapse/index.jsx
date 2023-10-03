@@ -6,7 +6,6 @@ import style from "./style.css"
 import { useState } from "react"
 
 const Container = styled.div`
-	width: 80%;
 	margin-bottom: 25px;
 `
 const ContainerHeader = styled.div`
@@ -42,11 +41,8 @@ function Collapse ({title, content}) {
 		console.log(isCollapsed)
 	}
 
-	console.log(content)
-
-
 	return (
-		<Container>
+		<Container className={title === "Equipements" || title === "Description" ? "small" : "wide"}>
 			<ContainerHeader>
 				<p>{title}</p>
 				<Arrow src={isCollapsed ? arrowDown : arrowUp} alt="arrow" onClick={toggle}/>

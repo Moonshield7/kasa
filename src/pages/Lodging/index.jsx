@@ -4,18 +4,24 @@ import styled from "styled-components";
 import colors from "../../utils/style/colors";
 import Tag from "../../components/Tag";
 import Collapse from "../../components/Collapse";
+import Rating from "../../components/Rating";
 
 const Container = styled.div`
 	width: 90%;
 	margin: auto;
+	margin-bottom: 30px;
 `
 const TitleArea = styled.div`
 	color: ${colors.primary};
 	display: flex;
 	justify-content: space-between;
+	margin-top: 30px;
 `
 const TitleText = styled.div`
-
+	display:flex;
+	flex-direction: column;
+	height: 77px;
+	justify-content: space-around;
 `
 const HostInfo = styled.div`
 	display:flex;
@@ -37,10 +43,11 @@ const TagList = styled.ul`
 	width: 70%;
 	display:flex;
 `
-const MiscContainer = styled.div`
+const SubContainer = styled.div`
 	width:100%;
 	display:flex;
 	justify-content: space-between;
+	margin-top:15px;
 `
 
 const StarContainer = styled.div`
@@ -68,7 +75,7 @@ function Lodging () {
 					<HostPicture src={currentLodging.host.picture} alt="" />
 				</HostInfo>
 			</TitleArea>
-			<MiscContainer>
+			<SubContainer>
 				<TagList>
 					{currentLodging.tags.map((tag, index) => {
 						return <Tag 
@@ -77,17 +84,18 @@ function Lodging () {
 					})}
 				</TagList>
 				<StarContainer>
-					etoiles
+					<Rating 
+						numberOfStars={currentLodging.rating}/>
 				</StarContainer>
-			</MiscContainer>
-			<div>
+			</SubContainer>
+			<SubContainer>
 				<Collapse
 					title="Description"
 					content={currentLodging.description}/>
 				<Collapse
 					title="Equipements"
 					content={currentLodging.equipments}/>
-			</div>
+			</SubContainer>
 			
 		</Container>
 	)
