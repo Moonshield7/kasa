@@ -3,6 +3,7 @@ import data from "../../data/data.json"
 import styled from "styled-components";
 import colors from "../../utils/style/colors";
 import Tag from "../../components/Tag";
+import Collapse from "../../components/Collapse";
 
 const Container = styled.div`
 	width: 90%;
@@ -80,12 +81,12 @@ function Lodging () {
 				</StarContainer>
 			</MiscContainer>
 			<div>
-				<div>
-					description
-				</div>
-				<div>
-					équipements
-				</div>
+				<Collapse
+					title="Description"
+					content={currentLodging.description}/>
+				<Collapse
+					title="Equipements"
+					content={currentLodging.equipments}/>
 			</div>
 			
 		</Container>
