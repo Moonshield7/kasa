@@ -30,30 +30,23 @@ function About () {
 		fetchAboutData()
 	}, [])
 
-	if(aboutData === undefined){
+	if(aboutData !== undefined){
 		return (
 			<Container>
 				<Banner />
 				<CollapseContainer>
+					{aboutData.map((section, index) => (
+						 <Collapse 
+						 key={`${section}-${index}`}
+							title={section.title}
+							content={section.content}
+						 />
+					))}
 				</CollapseContainer>
+	
 			</Container>
 		)
 	}
-	return (
-		<Container>
-			<Banner />
-			<CollapseContainer>
-				{aboutData.map((section, index) => (
-					 <Collapse 
-					 key={`${section}-${index}`}
-						title={section.title}
-						content={section.content}
-					 />
-				))}
-			</CollapseContainer>
-
-		</Container>
-	)
 }
 
 export default About
