@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import Collapse from "../../components/Collapse"
-import data from "../../data/about.json"
 import Banner from "../../components/Banner"
+import { useEffect, useState } from "react"
 
 const Container = styled.div`
 min-height: 650px;
@@ -19,11 +19,31 @@ padding-top:65px;
 `
 
 function About () {
+	const [aboutData, setAboutData] = useState()
+	useEffect(() => {
+		async function fetchAboutData(){
+			const response = await fetch('/data/about.json')
+			const data = await response.json()
+			setAboutData(data)
+		}
+
+		fetchAboutData()
+	}, [])
+
+	if(aboutData === undefined){
+		return (
+			<Container>
+				<Banner />
+				<CollapseContainer>
+				</CollapseContainer>
+			</Container>
+		)
+	}
 	return (
 		<Container>
 			<Banner />
 			<CollapseContainer>
-				{data.map((section, index) => (
+				{aboutData.map((section, index) => (
 					 <Collapse 
 					 key={`${section}-${index}`}
 						title={section.title}

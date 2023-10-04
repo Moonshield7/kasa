@@ -1,5 +1,5 @@
-import activeStar from "../../utils/assets/star-active 3.png"
-import inactiveStar from "../../utils/assets/star-inactive 1.png"
+import activeStar from "../../../utils/assets/star-active 3.png"
+import inactiveStar from "../../../utils/assets/star-inactive 1.png"
 
 function Rating({numberOfStars}) {
 	const rating = parseInt(numberOfStars);

@@ -1,38 +1,12 @@
-import styled from "styled-components"
-import colors from "../../utils/style/colors"
 import Banner from "../../components/Banner"
-import Card from "../../components/Card"
-import data from "../../data/data.json"
-import { Link } from "react-router-dom"
-
-//Placeholder content before making the actual components
-const CardContainer = styled.ul`
-	width: 90%;
-	min-height: 829px;
-	background-color: ${colors.gray};
-	border-radius: 15px;
-	margin: 50px auto;
-	padding: 80px;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-between;
-`
+import CardList from "../../components/CardList"
 
 function Home () {
+
 	return (
 		<div>
 			<Banner />
-			<CardContainer>
-				{data.map((lodging, index) => (
-					<Link to={`/lodging/${lodging.id}`} key={`${lodging}-${index}`}>
-					<Card 
-					key={`${lodging}-${index}`}
-					cover={lodging.cover}
-					title={lodging.title} />
-					</Link>
-				))}
-			</CardContainer>
+			<CardList />
 		</div>
 	)
 }

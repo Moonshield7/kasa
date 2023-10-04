@@ -49,4 +49,31 @@ function Header () {
 	)
 }
 
+// function Header () {
+// 	const activePage = window.location.href;
+// 	console.log(activePage)
+
+// 	function refreshPage() {
+// 		window.location.reload(false);
+// 	  }
+
+// 	const styles = {
+// 		home:{
+// 			textDecoration: activePage === "http://localhost:3000/" ? "underline" : "none"
+// 		},
+// 		about:{
+// 			textDecoration: activePage === "http://localhost:3000/about" ? "underline" : "none"
+// 		}
+// 	}
+// 	return (
+// 		<StyledNav>
+// 			<img src={logo} alt="Logo Kasa" />
+// 			<div>
+// 			<StyledLink to="/" style={styles.home}>Accueil</StyledLink>
+// 			<StyledLink to="/about" style={styles.about}>About</StyledLink>
+// 			</div>
+// 		</StyledNav>
+// 	)
+// }
+
 export default Header

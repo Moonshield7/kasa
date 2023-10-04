@@ -1,4 +1,4 @@
-import colors from "../../utils/style/colors"
+import colors from "../../../utils/style/colors"
 import styled from "styled-components"
 
 const TagLabel = styled.li`
