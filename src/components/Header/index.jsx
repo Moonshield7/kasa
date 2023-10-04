@@ -1,8 +1,7 @@
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import styled from "styled-components"
 import logo from "../../utils/logolight.png"
 import colors from "../../utils/style/colors"
-import { useState } from "react"
 
 const StyledLink = styled(Link)`
 	color: ${colors.primary};
@@ -22,58 +21,26 @@ const StyledNav = styled.nav`
 
 
 function Header () {
-	const [currentPage, setCurrentPage] = useState();
-	function toHome(){
-		setCurrentPage("Home")
-	}
-	function toAbout(){
-		setCurrentPage("About")
-	}
+	let location = useLocation();
 
 	const styles = {
 		home:{
-			textDecoration: currentPage === "Home" ? "underline" : "none"
+			textDecoration: location.pathname === "/" ? "underline" : "none"
 		},
 		about:{
-			textDecoration: currentPage === "About" ? "underline" : "none"
+			textDecoration: location.pathname === "/about" ? "underline" : "none"
 		}
 	}
+
 	return (
 		<StyledNav>
 			<img src={logo} alt="Logo Kasa" />
 			<div>
-			<StyledLink to="/" onClick={toHome} style={styles.home}>Accueil</StyledLink>
-			<StyledLink to="/about" onClick={toAbout} style={styles.about}>About</StyledLink>
+			<StyledLink to="/" style={styles.home}>Accueil</StyledLink>
+			<StyledLink to="/about" style={styles.about}>About</StyledLink>
 			</div>
 		</StyledNav>
 	)
 }
-
-// function Header () {
-// 	const activePage = window.location.href;
-// 	console.log(activePage)
-
-// 	function refreshPage() {
-// 		window.location.reload(false);
-// 	  }
-
-// 	const styles = {
-// 		home:{
-// 			textDecoration: activePage === "http://localhost:3000/" ? "underline" : "none"
-// 		},
-// 		about:{
-// 			textDecoration: activePage === "http://localhost:3000/about" ? "underline" : "none"
-// 		}
-// 	}
-// 	return (
-// 		<StyledNav>
-// 			<img src={logo} alt="Logo Kasa" />
-// 			<div>
-// 			<StyledLink to="/" style={styles.home}>Accueil</StyledLink>
-// 			<StyledLink to="/about" style={styles.about}>About</StyledLink>
-// 			</div>
-// 		</StyledNav>
-// 	)
-// }
 
 export default Header
