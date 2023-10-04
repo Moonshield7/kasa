@@ -32,23 +32,20 @@ function CardList() {
 		fetchData()
 	}, [])
 
-	if(lodgings === undefined){
-		return (<CardContainer>
-		</CardContainer>)
+	if(lodgings !== undefined){
+		return (
+			<CardContainer>
+				{lodgings.map((lodging, index) => (
+					<StyledLink to={`/lodging/${lodging.id}`} key={`${lodging}-${index}`}>
+					<Card 
+						key={`${lodging}-${index}`}
+						cover={lodging.cover}
+						title={lodging.title} />
+					</StyledLink>
+				))}
+			</CardContainer>
+		)
 	}
-
-	return (
-		<CardContainer>
-			{lodgings.map((lodging, index) => (
-				<StyledLink to={`/lodging/${lodging.id}`} key={`${lodging}-${index}`}>
-				<Card 
-					key={`${lodging}-${index}`}
-					cover={lodging.cover}
-					title={lodging.title} />
-				</StyledLink>
-			))}
-		</CardContainer>
-	)
 }
 
 export default CardList
