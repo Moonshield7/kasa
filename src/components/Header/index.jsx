@@ -37,7 +37,7 @@ function Header () {
 			<img src={logo} alt="Logo Kasa" />
 			<div>
 			<StyledLink to="/" style={styles.home}>Accueil</StyledLink>
-			<StyledLink to="/about" style={styles.about}>About</StyledLink>
+			<StyledLink to="/about" style={styles.about}>A propos</StyledLink>
 			</div>
 		</StyledNav>
 	)
