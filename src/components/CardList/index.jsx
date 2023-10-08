@@ -10,12 +10,13 @@ const CardContainer = styled.ul`
 	background-color: ${colors.gray};
 	border-radius: 15px;
 	margin: 50px auto;
-	padding: 80px;
+	padding: 80px 0;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: space-evenly;
 `
+
 const StyledLink = styled(Link)`
 	text-decoration: none;
 `
