@@ -6,6 +6,10 @@ const SubContainer = styled.div`
 	display:flex;
 	justify-content: space-between;
 	margin-top:15px;
+	@media screen and (max-width:390px){
+		flex-direction: column;
+		align-items: center;
+	}
 `
 
 function CollapseContainer({description, equipments}) {

@@ -12,12 +12,19 @@ const Container = styled.div`
 	width: 90%;
 	margin: auto;
 	margin-bottom: 30px;
+	@media screen and (max-width:390px){
+		margin-bottom: 0;
+	}
 `
 const SubContainer = styled.div`
 	width:100%;
 	display:flex;
 	justify-content: space-between;
 	margin-top:15px;
+	@media screen and (max-width:390px){
+		flex-direction: column;
+		width: 100%;
+	}
 `
 
 function Lodging () {

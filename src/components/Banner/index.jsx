@@ -16,6 +16,7 @@ const Background = styled.header`
 	@media screen and (max-width:390px){
 		height: 111px;
 		margin-top: 25px;
+		margin-bottom: 25px;
 	}
 `
 

@@ -16,6 +16,9 @@ const DisplayedPicture = styled.div`
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	@media screen and (max-width:390px){
+		height:255px;
+	}
 `
 const ArrowContainer = styled.div`
 	display: flex;
@@ -29,10 +32,16 @@ const PictureCounter = styled.p`
 	color: ${colors.white};
 	font-size:18px;
 	text-shadow: -1px 4px 5px rgba(0,0,0,0.76);
+	@media screen and (max-width:390px){
+		top: 90px;
+	}
 `
 const Arrow = styled.img`
 	&:hover{
 		cursor: pointer;
+	}
+	@media screen and (max-width:390px){
+		height: 24px;
 	}
 `
 

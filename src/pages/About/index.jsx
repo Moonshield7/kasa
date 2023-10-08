@@ -9,6 +9,10 @@ margin-bottom: 35px;
 display:flex;
 flex-direction: column;
 align-items:center;
+justify-content: flex-start;
+@media screen and (max-width:390px){
+	min-height: 519px;
+}
 `
 const CollapseContainer = styled.div`
 width:100%;
@@ -16,6 +20,9 @@ display:flex;
 flex-direction: column;
 align-items:center;
 padding-top:65px;
+@media screen and (max-width:390px){
+	padding-top: 0px;
+}
 `
 
 function About () {

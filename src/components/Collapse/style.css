@@ -5,3 +5,9 @@
 .wide{
 	width: 80%;
 }
+
+@media screen and (max-width:390px){
+	.small {
+		width: 100%;
+	}
+}
