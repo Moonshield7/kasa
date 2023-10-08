@@ -39,7 +39,10 @@ const HostInfo = styled.div`
 	display:flex;
 	align-items:center;
 	@media screen and (max-width:390px){
+		height: 40px;
 		justify-content: flex-end;
+		position: relative;
+		top: 10px;
 	}
 `
 const HostName = styled.p`

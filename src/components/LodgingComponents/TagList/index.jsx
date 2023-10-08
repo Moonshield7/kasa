@@ -7,6 +7,8 @@ const TagContainer = styled.ul`
 	flex-wrap:wrap;
 	@media screen and (max-width:390px){
 		width: 100%;
+		position: absolute;
+		top: 436px;
 	}
 `
 
