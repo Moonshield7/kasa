@@ -13,18 +13,28 @@ const StyledFooter = styled.footer`
 	color: ${colors.white};
 	font-size:24px;
 `
+const FooterText = styled.p`
+@media screen and (max-width:390px){
+	font-size: 12px;
+	width:120px;
+	text-align: center;
+}
+`
 
 const StyledLogo = styled.img`
 	height:40px;
 	width: 122px;
 	margin-bottom: 25px;
+	@media screen and (max-width:390px){
+		margin-bottom: 10px;
+	}
 `
 
 function Footer () {
 	return (
 		<StyledFooter>
 			<StyledLogo src={logo} alt="Logo Kasa"/>
-			<span>© 2020 Kasa. All rights reserved</span>
+			<FooterText>© 2020 Kasa. All rights reserved</FooterText>
 		</StyledFooter>
 	)
 }
