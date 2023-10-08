@@ -8,6 +8,9 @@ const StyledLink = styled(Link)`
 	font-size: 24px;
 	padding: 15px;
 	text-decoration: none;
+	@media screen and (max-width:390px){
+		font-size: 12px;
+	}
 `
 const StyledNav = styled.nav`
 	display: flex;
@@ -17,6 +20,16 @@ const StyledNav = styled.nav`
 	margin-top:30px;
 	width: 90%;
 	height: 68px;
+
+	@media screen and (max-width:390px){
+		height:50px;
+		text-transform: uppercase;
+	}
+`
+const KasaLogo = styled.img`
+	@media screen and (max-width:390px){
+		height:46px;
+	}
 `
 
 
@@ -34,7 +47,7 @@ function Header () {
 
 	return (
 		<StyledNav>
-			<img src={logo} alt="Logo Kasa" />
+			<KasaLogo src={logo} alt="Logo Kasa" />
 			<div>
 			<StyledLink to="/" style={styles.home}>Accueil</StyledLink>
 			<StyledLink to="/about" style={styles.about}>A propos</StyledLink>
