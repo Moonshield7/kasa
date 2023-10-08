@@ -6,6 +6,7 @@ import CollapseContainer from "../../components/LodgingComponents/CollapseContai
 import StarContainer from "../../components/LodgingComponents/StarContainer";
 import TagList from "../../components/LodgingComponents/TagList";
 import { useEffect, useState } from "react";
+import Carousel from "../../components/LodgingComponents/Carousel";
 
 const Container = styled.div`
 	width: 90%;
@@ -39,8 +40,7 @@ function Lodging () {
 
 		return (
 			<Container>
-				{/* Carousel à coder */}
-				<img src={currentLodging.cover} alt="" />
+				<Carousel pictures={currentLodging.pictures} />
 				<TitleArea
 					title={currentLodging.title}
 					location={currentLodging.location}
