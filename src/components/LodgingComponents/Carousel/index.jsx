@@ -2,6 +2,7 @@ import styled from "styled-components"
 import arrowLeft from "../../../utils/assets/leftArrow.png"
 import arrowRight from "../../../utils/assets/rightArrow.png"
 import colors from "../../../utils/style/colors"
+import { useState } from "react"
 
 const DisplayedPicture = styled.div`
 	width: 100%;
@@ -35,20 +36,39 @@ const Arrow = styled.img`
 	}
 `
 
-
 function Carousel ({pictures}) {
+const [currentPictureIndex, setCurrentPictureIndex] = useState(0);
+function numberOfPictures(){
+	let total = 0;
+	pictures.forEach(pic => total = total+1)
+	return total
+}
 
-console.log(pictures)
+function nextPicture() {
+	if(currentPictureIndex >= numberOfPictures() -1){
+		setCurrentPictureIndex(0)
+	} else {
+		setCurrentPictureIndex(currentPictureIndex + 1);
+	}
 
-const pic = pictures[0]
+}
+function previousPicture(){
+	if(currentPictureIndex === 0){
+		setCurrentPictureIndex(numberOfPictures() -1)
+	} else {
+		setCurrentPictureIndex(currentPictureIndex -1)
+	}
+}
+
+const pic = pictures[currentPictureIndex]
 
 return (
 	<DisplayedPicture style={{backgroundImage: `url(${pic})`}} >
 		<ArrowContainer>
-			<Arrow src={arrowLeft} alt="" />
-			<Arrow src={arrowRight} alt="" />
+			<Arrow src={arrowLeft} alt="" onClick={previousPicture}/>
+			<Arrow src={arrowRight} alt="" onClick={nextPicture}/>
 		</ArrowContainer>
-		<PictureCounter>1/4</PictureCounter>
+		<PictureCounter>{currentPictureIndex+1} / {numberOfPictures()}</PictureCounter>
 	</DisplayedPicture>
 )
 }
