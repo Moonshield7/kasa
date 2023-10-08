@@ -15,6 +15,8 @@ const Container = styled.li`
 `
 const CardTitle = styled.h2`
 	color: ${colors.white};
+	display: flex;
+	align-items: flex-end;
 	font-size: 18px;
 	width: 300px;
 	height: 52px;
