@@ -15,6 +15,13 @@ const CardContainer = styled.ul`
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
+	@media screen and (max-width:390px){
+		margin-top: 25px;
+		padding: 0;
+		background: none;
+		flex-direction: column;
+		align-items: center;
+	}
 `
 
 const StyledLink = styled(Link)`

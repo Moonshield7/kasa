@@ -7,9 +7,11 @@ const Container = styled.li`
 	width:340px;
 	height: 340px;
 	margin-bottom: 75px;
-	background-color: ${colors.primary};
 	border-radius: 15px;
 	overflow: clip;
+	@media screen and (max-width:390px){
+		margin-bottom: 25px;
+	}
 `
 const CardTitle = styled.h2`
 	color: ${colors.white};
