@@ -13,7 +13,7 @@ const TagLabel = styled.li`
 	align-items: center;
 	margin-right: 15px;
 	padding: 0 10px;
-	@media screen and (max-width:390px){
+	@media screen and (max-width:430px){
 		min-width:70px;
 		height: 18px;
 		font-size:10px;

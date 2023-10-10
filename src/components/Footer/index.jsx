@@ -14,7 +14,7 @@ const StyledFooter = styled.footer`
 	font-size:24px;
 `
 const FooterText = styled.p`
-@media screen and (max-width:390px){
+@media screen and (max-width:430px){
 	font-size: 12px;
 	width:120px;
 	text-align: center;
@@ -25,7 +25,7 @@ const StyledLogo = styled.img`
 	height:40px;
 	width: 122px;
 	margin-bottom: 25px;
-	@media screen and (max-width:390px){
+	@media screen and (max-width:430px){
 		margin-bottom: 10px;
 	}
 `

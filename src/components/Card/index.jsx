@@ -9,7 +9,7 @@ const Container = styled.li`
 	margin-bottom: 75px;
 	border-radius: 15px;
 	overflow: clip;
-	@media screen and (max-width:390px){
+	@media screen and (max-width:430px){
 		margin-bottom: 25px;
 	}
 `

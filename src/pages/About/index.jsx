@@ -10,7 +10,7 @@ display:flex;
 flex-direction: column;
 align-items:center;
 justify-content: flex-start;
-@media screen and (max-width:390px){
+@media screen and (max-width:430px){
 	min-height: 519px;
 }
 `
@@ -20,7 +20,7 @@ display:flex;
 flex-direction: column;
 align-items:center;
 padding-top:65px;
-@media screen and (max-width:390px){
+@media screen and (max-width:430px){
 	padding-top: 0px;
 }
 `

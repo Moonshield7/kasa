@@ -10,12 +10,12 @@ const CardContainer = styled.ul`
 	background-color: ${colors.gray};
 	border-radius: 15px;
 	margin: 50px auto;
-	padding: 80px 0;
+	padding: 80px 20px;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
-	@media screen and (max-width:390px){
+	@media screen and (max-width:430px){
 		margin-top: 25px;
 		padding: 0;
 		background: none;

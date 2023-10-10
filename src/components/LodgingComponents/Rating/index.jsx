@@ -3,7 +3,7 @@ import activeStar from "../../../utils/assets/star-active 3.png"
 import inactiveStar from "../../../utils/assets/star-inactive 1.png"
 
 const Star = styled.img`
-	@media screen and (max-width:390px){
+	@media screen and (max-width:430px){
 		width: 18px;
 		height: 18px;
 	}

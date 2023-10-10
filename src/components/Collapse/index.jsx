@@ -17,7 +17,7 @@ const ContainerHeader = styled.div`
 	border-radius: 10px;
 	color: ${colors.white};
 	font-size:24px;
-	@media screen and (max-width:390px){
+	@media screen and (max-width:430px){
 		height:30px;
 		font-size: 13px;
 		padding: 0 10px;
@@ -27,7 +27,7 @@ const Arrow = styled.img`
 	&:hover{
 		cursor:pointer;
 	}
-	@media screen and (max-width:390px){
+	@media screen and (max-width:430px){
 		height: 16px;
 		font-size: 13px;
 		padding-left: 10px;
@@ -43,7 +43,7 @@ const DropdownContent = styled.li`
 	color: ${colors.primary};
 	display:flex;
 	flex-direction:column;
-	@media screen and (max-width:390px){
+	@media screen and (max-width:430px){
 		font-size: 12px;
 	}
 `

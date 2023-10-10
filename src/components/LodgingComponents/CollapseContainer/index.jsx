@@ -6,7 +6,7 @@ const SubContainer = styled.div`
 	display:flex;
 	justify-content: space-between;
 	margin-top:15px;
-	@media screen and (max-width:390px){
+	@media screen and (max-width:430px){
 		flex-direction: column;
 		align-items: center;
 	}

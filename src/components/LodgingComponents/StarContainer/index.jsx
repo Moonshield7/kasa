@@ -5,7 +5,7 @@ const Container = styled.div`
 	display:flex;
 	width:29%;
 	justify-content:flex-end;
-	@media screen and (max-width:390px){
+	@media screen and (max-width:430px){
 		position: absolute;
 		top: 480px;
 		left: 0px;

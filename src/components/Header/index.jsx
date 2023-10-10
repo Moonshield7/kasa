@@ -8,7 +8,7 @@ const StyledLink = styled(Link)`
 	font-size: 24px;
 	padding: 15px;
 	text-decoration: none;
-	@media screen and (max-width:390px){
+	@media screen and (max-width:430px){
 		font-size: 12px;
 	}
 `
@@ -21,13 +21,13 @@ const StyledNav = styled.nav`
 	width: 90%;
 	height: 68px;
 
-	@media screen and (max-width:390px){
+	@media screen and (max-width:430px){
 		height:50px;
 		text-transform: uppercase;
 	}
 `
 const KasaLogo = styled.img`
-	@media screen and (max-width:390px){
+	@media screen and (max-width:430px){
 		height:46px;
 	}
 `

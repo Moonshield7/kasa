@@ -12,7 +12,7 @@ const Container = styled.div`
 	width: 90%;
 	margin: auto;
 	margin-bottom: 30px;
-	@media screen and (max-width:390px){
+	@media screen and (max-width:430px){
 		margin-bottom: 0;
 	}
 `
@@ -21,7 +21,7 @@ const SubContainer = styled.div`
 	display:flex;
 	justify-content: space-between;
 	margin-top:15px;
-	@media screen and (max-width:390px){
+	@media screen and (max-width:430px){
 		flex-direction: column;
 		width: 100%;
 	}

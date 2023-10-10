@@ -13,7 +13,7 @@ const Background = styled.header`
 	border-radius: 15px;
 	margin: auto;
 	margin-top: 50px;
-	@media screen and (max-width:390px){
+	@media screen and (max-width:430px){
 		height: 111px;
 		margin-top: 25px;
 		margin-bottom: 25px;
@@ -30,7 +30,7 @@ const Title = styled.h1`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	@media screen and (max-width:390px){
+	@media screen and (max-width:430px){
 		font-size: 24px;
 		padding: 25px;
 		justify-content: left;
@@ -38,7 +38,7 @@ const Title = styled.h1`
 	}
 `
 const LignReturn = styled.br`
-	@media screen and (min-width:391px){
+	@media screen and (min-width:430px){
 		display: none;
 
 	}
