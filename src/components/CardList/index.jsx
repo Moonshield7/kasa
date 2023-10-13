@@ -1,7 +1,7 @@
-import Card from '../../components/Card';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import Card from '../Card';
 import colors from '../../utils/style/colors';
 
 const CardContainer = styled.ul`

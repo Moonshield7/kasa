@@ -1,14 +1,13 @@
-import Banner from "../../components/Banner"
-import CardList from "../../components/CardList"
+import Banner from '../../components/Banner';
+import CardList from '../../components/CardList';
 
-function Home () {
-
-	return (
-		<div>
-			<Banner />
-			<CardList />
-		</div>
-	)
+function Home() {
+  return (
+    <div>
+      <Banner />
+      <CardList />
+    </div>
+  );
 }
 
-export default Home
+export default Home;
