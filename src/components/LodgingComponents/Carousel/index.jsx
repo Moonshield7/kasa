@@ -51,6 +51,6 @@ function Carousel({ pictures }) {
 }
 
 Carousel.propTypes = {
-  pictures: PropTypes.object.isRequired,
+  pictures: PropTypes.array.isRequired,
 };
 export default Carousel;

@@ -13,6 +13,7 @@ function CollapseContainer({ description, equipments }) {
 
 CollapseContainer.propTypes = {
   description: PropTypes.string.isRequired,
-  equipments: PropTypes.string.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  equipments: PropTypes.array.isRequired,
 };
 export default CollapseContainer;

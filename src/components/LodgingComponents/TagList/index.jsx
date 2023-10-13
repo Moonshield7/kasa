@@ -15,7 +15,7 @@ function TagList({ tags }) {
 }
 
 TagList.propTypes = {
-  tags: PropTypes.object.isRequired,
+  tags: PropTypes.array.isRequired,
 };
 
 export default TagList;
