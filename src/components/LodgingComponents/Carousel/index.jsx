@@ -1,52 +1,12 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable react/forbid-prop-types */
 /* eslint-disable react/jsx-one-expression-per-line */
 import { useCallback, useState } from 'react';
-import styled from 'styled-components';
 import { PropTypes } from 'prop-types';
+import './style.css';
 import arrowLeft from '../../../utils/assets/leftArrow.png';
 import arrowRight from '../../../utils/assets/rightArrow.png';
-import colors from '../../../utils/style/colors';
-
-const DisplayedPicture = styled.div`
-  width: 100%;
-  height: 415px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  border-radius: 15px;
-  margin-top: 35px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  @media screen and (max-width: 430px) {
-    height: 255px;
-  }
-`;
-const ArrowContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 95%;
-`;
-const PictureCounter = styled.p`
-  position: relative;
-  top: 130px;
-  color: ${colors.white};
-  font-size: 18px;
-  text-shadow: -1px 4px 5px rgba(0, 0, 0, 0.76);
-  @media screen and (max-width: 430px) {
-    top: 90px;
-  }
-`;
-const Arrow = styled.img`
-  &:hover {
-    cursor: pointer;
-  }
-  @media screen and (max-width: 430px) {
-    height: 24px;
-  }
-`;
 
 function Carousel({ pictures }) {
   const [currentPictureIndex, setCurrentPictureIndex] = useState(0);
@@ -78,15 +38,15 @@ function Carousel({ pictures }) {
   const pic = pictures[currentPictureIndex];
 
   return (
-    <DisplayedPicture style={{ backgroundImage: `url(${pic})` }}>
-      <ArrowContainer>
-        <Arrow src={arrowLeft} alt="" onClick={previousPicture} />
-        <Arrow src={arrowRight} alt="" onClick={nextPicture} />
-      </ArrowContainer>
-      <PictureCounter>
+    <div className="carousel-picture" style={{ backgroundImage: `url(${pic})` }}>
+      <div className="carousel-arrow-container">
+        <img className="carousel-arrow" src={arrowLeft} alt="" onClick={previousPicture} />
+        <img className="carousel-arrow" src={arrowRight} alt="" onClick={nextPicture} />
+      </div>
+      <p className="carousel-picture-counter">
         {currentPictureIndex + 1} / {numberOfPictures()}
-      </PictureCounter>
-    </DisplayedPicture>
+      </p>
+    </div>
   );
 }
 

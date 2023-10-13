@@ -1,0 +1,22 @@
+.lodging-container {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.lodging-subcontainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+@media screen and (max-width: 430px) {
+  .lodging-container {
+    margin-bottom: 0;
+  }
+  .lodging-subcontainer {
+    flex-direction: column;
+    width: 100%;
+  }
+}

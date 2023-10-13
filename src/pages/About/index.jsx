@@ -1,31 +1,7 @@
 import { useEffect, useState } from 'react';
-import styled from 'styled-components';
+import './style.css';
 import Collapse from '../../components/Collapse';
 import Banner from '../../components/Banner';
-
-const Container = styled.div`
-  min-height: 650px;
-  margin-bottom: 35px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  @media screen and (max-width: 430px) {
-    min-height: 519px;
-  }
-`;
-const CollapseContainer = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 65px;
-  @media screen and (max-width: 430px) {
-    padding-top: 0px;
-    min-height: 365px;
-    margin-top: 35px;
-  }
-`;
 
 function About() {
   const [aboutData, setAboutData] = useState();
@@ -41,14 +17,14 @@ function About() {
 
   if (aboutData !== undefined) {
     return (
-      <Container>
+      <div className="about-container">
         <Banner />
-        <CollapseContainer>
+        <div className="about-collapses">
           {aboutData.map((section) => (
             <Collapse key={`${section.id}`} title={section.title} content={section.content} />
           ))}
-        </CollapseContainer>
-      </Container>
+        </div>
+      </div>
     );
   }
 }

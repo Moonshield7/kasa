@@ -1,91 +1,26 @@
 /* eslint-disable object-curly-newline */
-import styled from 'styled-components';
+import './style.css';
 import { PropTypes } from 'prop-types';
 import colors from '../../../utils/style/colors';
-
-const TitleContainer = styled.div`
-  color: ${colors.primary};
-  display: flex;
-  justify-content: space-between;
-  margin-top: 30px;
-  @media screen and (max-width: 430px) {
-    flex-direction: column;
-    justify-content: start;
-    margin-top: 10px;
-  }
-`;
-const TitleText = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 77px;
-  justify-content: space-around;
-  @media screen and (max-width: 430px) {
-    justify-content: start;
-  }
-`;
-const MainTitle = styled.h1`
-  font-size: 32px;
-  @media screen and (max-width: 430px) {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-`;
-const Subtitle = styled.p`
-  font-size: 18px;
-  @media screen and (max-width: 430px) {
-    font-size: 14px;
-  }
-`;
-const HostInfo = styled.div`
-  display: flex;
-  align-items: center;
-  @media screen and (max-width: 430px) {
-    height: 40px;
-    justify-content: flex-end;
-    position: relative;
-    top: 25px;
-  }
-`;
-const HostName = styled.p`
-  width: 93px;
-  height: 52px;
-  font-size: 18px;
-  text-align: right;
-  margin-right: 15px;
-  @media screen and (max-width: 430px) {
-    font-size: 12px;
-    height: 33px;
-    width: 80px;
-  }
-`;
-const HostPicture = styled.img`
-  width: 64px;
-  heigh: 64px;
-  border-radius: 50px;
-  @media screen and (max-width: 430px) {
-    height: 32px;
-    width: 32px;
-  }
-`;
 
 function TitleArea({ title, location, hostName, hostPicture }) {
   const name = hostName.split(' ');
 
   return (
-    <TitleContainer>
-      <TitleText>
-        <MainTitle>{title}</MainTitle>
-        <Subtitle>{location}</Subtitle>
-      </TitleText>
-      <HostInfo>
-        <HostName>
+    <div className="title-container" style={{ color: colors.primary }}>
+      <div className="title-text">
+        <h1 className="title-name">{title}</h1>
+        <p className="title-location">{location}</p>
+      </div>
+      <div className="host-container">
+        <p className="host-name">
           {name[0]}
           <br />
           {name[1]}
-        </HostName>
-        <HostPicture src={hostPicture} alt="" />
-      </HostInfo>
-    </TitleContainer>
+        </p>
+        <img className="host-picture" src={hostPicture} alt="" />
+      </div>
+    </div>
   );
 }
 

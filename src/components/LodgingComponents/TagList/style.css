@@ -1,0 +1,14 @@
+.tag-container {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+@media screen and (max-width: 430px) {
+  .tag-container {
+    width: 100%;
+    position: absolute;
+    top: 455px;
+  }
+}

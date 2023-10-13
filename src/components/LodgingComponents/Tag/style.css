@@ -1,0 +1,21 @@
+.tag-label {
+  min-width: 115px;
+  height: 25px;
+  color: white;
+  font-size: 14px;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+  padding: 0 10px;
+}
+
+@media screen and (max-width: 430px) {
+  .tag-label {
+    min-width: 70px;
+    height: 18px;
+    font-size: 10px;
+    margin-top: 5px;
+  }
+}

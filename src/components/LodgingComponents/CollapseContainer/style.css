@@ -1,0 +1,13 @@
+.subcontainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+@media screen and (max-width: 430px) {
+  .subcontainer {
+    flex-direction: column;
+    align-items: center;
+  }
+}

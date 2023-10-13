@@ -1,31 +1,12 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import styled from 'styled-components';
+import './style.css';
 import TitleArea from '../../components/LodgingComponents/TitleArea';
 import CollapseContainer from '../../components/LodgingComponents/CollapseContainer';
 import StarContainer from '../../components/LodgingComponents/StarContainer';
 import TagList from '../../components/LodgingComponents/TagList';
 
 import Carousel from '../../components/LodgingComponents/Carousel';
-
-const Container = styled.div`
-  width: 90%;
-  margin: auto;
-  margin-bottom: 30px;
-  @media screen and (max-width: 430px) {
-    margin-bottom: 0;
-  }
-`;
-const SubContainer = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 15px;
-  @media screen and (max-width: 430px) {
-    flex-direction: column;
-    width: 100%;
-  }
-`;
 
 function Lodging() {
   const [lodgings, setLodgings] = useState();
@@ -45,7 +26,7 @@ function Lodging() {
     const currentLodging = lodgings.find((lodging) => lodging.id === idLodging);
 
     return (
-      <Container>
+      <div className="lodging-container">
         <Carousel pictures={currentLodging.pictures} />
         <TitleArea
           title={currentLodging.title}
@@ -53,15 +34,15 @@ function Lodging() {
           hostName={currentLodging.host.name}
           hostPicture={currentLodging.host.picture}
         />
-        <SubContainer>
+        <div className="lodging-subcontainer">
           <TagList tags={currentLodging.tags} />
           <StarContainer rating={currentLodging.rating} />
-        </SubContainer>
+        </div>
         <CollapseContainer
           description={currentLodging.description}
           equipments={currentLodging.equipments}
         />
-      </Container>
+      </div>
     );
   }
 }

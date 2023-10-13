@@ -1,47 +1,7 @@
 /* eslint-disable react/jsx-one-expression-per-line */
-import styled from 'styled-components';
-import colors from '../../utils/style/colors';
 import picture1 from '../../utils/assets/homeimg.png';
 import picture2 from '../../utils/assets/aboutimg.png';
-
-const Background = styled.header`
-  width: 90%;
-  height: 223px;
-  background: url(${picture1});
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-clip: border-box;
-  border-radius: 15px;
-  margin: auto;
-  margin-top: 50px;
-  @media screen and (max-width: 390px) {
-    height: 111px;
-    margin-top: 25px;
-  }
-`;
-
-const Title = styled.h1`
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.35);
-  border-radius: 15px;
-  color: ${colors.white};
-  font-size: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  @media screen and (max-width: 390px) {
-    font-size: 24px;
-    padding: 25px;
-    justify-content: left;
-  }
-`;
-const LignReturn = styled.br`
-  @media screen and (min-width: 391px) {
-    display: none;
-  }
-`;
+import './style.css';
 
 function Banner() {
   const activePage = window.location.href;
@@ -52,19 +12,19 @@ function Banner() {
     },
   };
   return (
-    <Background style={styles.image}>
-      <Title>
+    <header className="banner-background" style={styles.image}>
+      <h1 className="banner-title">
         {' '}
         {activePage === 'http://localhost:3000/about' ? (
           ''
         ) : (
           <span>
-            Chez vous, <LignReturn />
+            Chez vous, <br className="banner-br" />
             partout et ailleurs
           </span>
         )}
-      </Title>
-    </Background>
+      </h1>
+    </header>
   );
 }
 

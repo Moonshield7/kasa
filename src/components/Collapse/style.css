@@ -1,13 +1,49 @@
 .small {
   width: 45%;
+  margin-bottom: 25px;
 }
 
 .wide {
   width: 80%;
+  margin-bottom: 25px;
+}
+
+.collapse-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: white;
+  font-size: 24px;
+}
+
+.arrow:hover {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  list-style: none;
+  padding: 25px 15px;
+  display: flex;
+  flex-direction: column;
 }
 
 @media screen and (max-width: 430px) {
   .small {
     width: 100%;
+  }
+  .collapse-header {
+    height: 30px;
+    font-size: 13px;
+    padding: 0 10px;
+  }
+  .arrow {
+    height: 16px;
+    font-size: 13px;
+    padding-left: 10px;
+  }
+  .dropdown-content {
+    font-size: 12px;
   }
 }

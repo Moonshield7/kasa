@@ -1,23 +1,12 @@
-import styled from 'styled-components';
+import './style.css';
 import { PropTypes } from 'prop-types';
 import Rating from '../Rating';
 
-const Container = styled.div`
-  display: flex;
-  width: 29%;
-  justify-content: flex-end;
-  @media screen and (max-width: 430px) {
-    position: absolute;
-    top: 490px;
-    left: 0px;
-  }
-`;
-
 function StarContainer({ rating }) {
   return (
-    <Container>
+    <div className="star-container">
       <Rating numberOfStars={rating} />
-    </Container>
+    </div>
   );
 }
 
