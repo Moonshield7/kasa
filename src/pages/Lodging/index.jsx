@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import './style.css';
 import TitleArea from '../../components/LodgingComponents/TitleArea';
@@ -24,6 +24,10 @@ function Lodging() {
 
   if (lodgings !== undefined) {
     const currentLodging = lodgings.find((lodging) => lodging.id === idLodging);
+    if (currentLodging === undefined) {
+      console.log('NON');
+      return <Navigate to="*" />;
+    }
 
     return (
       <div className="lodging-container">
