@@ -43,7 +43,7 @@ const HostInfo = styled.div`
     height: 40px;
     justify-content: flex-end;
     position: relative;
-    top: 10px;
+    top: 25px;
   }
 `;
 const HostName = styled.p`
@@ -69,6 +69,8 @@ const HostPicture = styled.img`
 `;
 
 function TitleArea({ title, location, hostName, hostPicture }) {
+  const name = hostName.split(' ');
+
   return (
     <TitleContainer>
       <TitleText>
@@ -76,7 +78,11 @@ function TitleArea({ title, location, hostName, hostPicture }) {
         <Subtitle>{location}</Subtitle>
       </TitleText>
       <HostInfo>
-        <HostName>{hostName}</HostName>
+        <HostName>
+          {name[0]}
+          <br />
+          {name[1]}
+        </HostName>
         <HostPicture src={hostPicture} alt="" />
       </HostInfo>
     </TitleContainer>

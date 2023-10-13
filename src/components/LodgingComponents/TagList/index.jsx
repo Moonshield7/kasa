@@ -11,7 +11,7 @@ const TagContainer = styled.ul`
   @media screen and (max-width: 430px) {
     width: 100%;
     position: absolute;
-    top: 436px;
+    top: 455px;
   }
 `;
 

@@ -8,7 +8,7 @@ const Container = styled.div`
   justify-content: flex-end;
   @media screen and (max-width: 430px) {
     position: absolute;
-    top: 480px;
+    top: 490px;
     left: 0px;
   }
 `;
