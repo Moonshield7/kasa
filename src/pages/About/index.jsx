@@ -22,6 +22,8 @@ const CollapseContainer = styled.div`
   padding-top: 65px;
   @media screen and (max-width: 430px) {
     padding-top: 0px;
+    min-height: 365px;
+    margin-top: 35px;
   }
 `;
 
