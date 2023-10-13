@@ -37,17 +37,20 @@ function Carousel({ pictures }) {
 
   const pic = pictures[currentPictureIndex];
 
-  return (
-    <div className="carousel-picture" style={{ backgroundImage: `url(${pic})` }}>
-      <div className="carousel-arrow-container">
-        <img className="carousel-arrow" src={arrowLeft} alt="" onClick={previousPicture} />
-        <img className="carousel-arrow" src={arrowRight} alt="" onClick={nextPicture} />
+  if (numberOfPictures() !== 1) {
+    return (
+      <div className="carousel-picture" style={{ backgroundImage: `url(${pic})` }}>
+        <div className="carousel-arrow-container">
+          <img className="carousel-arrow" src={arrowLeft} alt="" onClick={previousPicture} />
+          <img className="carousel-arrow" src={arrowRight} alt="" onClick={nextPicture} />
+        </div>
+        <p className="carousel-picture-counter">
+          {currentPictureIndex + 1} / {numberOfPictures()}
+        </p>
       </div>
-      <p className="carousel-picture-counter">
-        {currentPictureIndex + 1} / {numberOfPictures()}
-      </p>
-    </div>
-  );
+    );
+  }
+  return <div className="carousel-picture" style={{ backgroundImage: `url(${pic})` }} />;
 }
 
 Carousel.propTypes = {
