@@ -33,6 +33,9 @@
   .small {
     width: 100%;
   }
+  .wide {
+    width: 90%;
+  }
   .collapse-header {
     height: 30px;
     font-size: 13px;
