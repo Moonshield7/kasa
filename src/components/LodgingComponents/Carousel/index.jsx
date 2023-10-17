@@ -17,7 +17,7 @@ function Carousel({ pictures }) {
       total += 1;
     });
     return total;
-  }, []);
+  });
 
   const nextPicture = useCallback(() => {
     if (currentPictureIndex >= numberOfPictures() - 1) {
@@ -25,7 +25,7 @@ function Carousel({ pictures }) {
     } else {
       setCurrentPictureIndex(currentPictureIndex + 1);
     }
-  }, []);
+  });
 
   const previousPicture = useCallback(() => {
     if (currentPictureIndex === 0) {
@@ -33,7 +33,7 @@ function Carousel({ pictures }) {
     } else {
       setCurrentPictureIndex(currentPictureIndex - 1);
     }
-  }, []);
+  });
 
   const pic = pictures[currentPictureIndex];
 

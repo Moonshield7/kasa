@@ -25,7 +25,6 @@ function Lodging() {
   if (lodgings !== undefined) {
     const currentLodging = lodgings.find((lodging) => lodging.id === idLodging);
     if (currentLodging === undefined) {
-      console.log('NON');
       return <Navigate to="*" />;
     }
 
