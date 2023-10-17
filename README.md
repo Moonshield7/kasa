@@ -17,10 +17,13 @@ Pour vérifier les erreurs grâce à ESLint, utilisez la commande `npm run lint`
 ### Versions utilisées :
 
 React : 18.2.0
+
 React-router : 6.16.0
+
 Prop-types : 15.8.1
 
 ESLint : 8.51.0 (avec la configuration airbnb)
+
 Prettier : 3.0.3
 
 ### Soutenance
