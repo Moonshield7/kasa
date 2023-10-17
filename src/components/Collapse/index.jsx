@@ -11,7 +11,7 @@ function Collapse({ title, content }) {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const toggle = useCallback(() => {
     setIsCollapsed(!isCollapsed);
-  });
+  }, []);
 
   return (
     <div className={title === 'Equipements' || title === 'Description' ? 'small' : 'wide'}>
