@@ -1,6 +1,6 @@
 # PROJET 11 : Kasa - Développez une application Web avec React et React Router
 
-## Par Fannie PRESMAN - Octobre 2023
+## Par Moonshield - Octobre 2023
 
 ### Cloner le projet :
 
